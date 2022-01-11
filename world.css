@@ -1,0 +1,96 @@
+@font-face {
+  font-family: "Alarm Clock";
+  src: url(./alarm_clock.ttf);
+}
+*,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+.heading {
+  letter-spacing: 10px;
+  padding-block: 5px;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  background: rgb(50, 50, 50);
+  background: radial-gradient(
+    circle,
+    rgba(50, 50, 50, 1) 29%,
+    rgba(26, 26, 26, 1) 100%
+  );
+  color: rgba(250, 245, 245, 0.925);
+}
+
+main {
+  text-align: center;
+  text-transform: uppercase;
+  box-shadow: 0 0 10px 10px rgba(231, 183, 183, 0.5);
+  padding: 10px 20px;
+}
+
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.timer__input {
+  position: relative;
+  font-size: 40px;
+  font-family: "Alarm Clock", serif;
+  padding: 5px 10px;
+}
+
+.timer__input::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  padding: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgb(8, 8, 8),
+    rgba(107, 107, 112, 0.637)
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+.timer__label {
+  font-size: 14px;
+  color: rgba(255, 0, 140, 0.459);
+  padding-top: 5px;
+}
+
+.timer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cursor {
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.birthday_text {
+  display: none;
+  font-family: fantasy;
+}
