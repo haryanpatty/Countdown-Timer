@@ -19,9 +19,9 @@ function countdown() {
   let h = Math.floor(m / 60);
   let d = Math.floor(h / 24);
 
-  hour %= 24;
-  minute %= 60;
-  second %= 60;
+  h  %= 24;
+  m  %= 60;
+  s  %= 60;
 
   h = h < 10 ? "0" + h : h;
   m = m < 10 ? "0" + m : m;
