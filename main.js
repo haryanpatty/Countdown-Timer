@@ -5,9 +5,9 @@ function countdown() {
   const currentTime = now.getTime();
   const eventTime = eventDate.getTime();
 
-  const remTime = eventTime - currentTime;
+  const remainingTime = eventTime - currentTime;
 
-  if (remTime <= 0) {
+  if (remainingTime <= 0) {
     document.querySelector(".timer").style.display = "none";
     document.querySelector(".heading").style.display = "none";
     document.querySelector(".birthday_text").style.display = "block";
@@ -19,9 +19,9 @@ function countdown() {
   let h = Math.floor(m / 60);
   let d = Math.floor(h / 24);
 
-  h %= 24;
-  m %= 60;
-  s %= 60;
+  hour %= 24;
+  minute %= 60;
+  second %= 60;
 
   h = h < 10 ? "0" + h : h;
   m = m < 10 ? "0" + m : m;
