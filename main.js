@@ -5,9 +5,9 @@ function countdown() {
   const currentTime = now.getTime();
   const eventTime = eventDate.getTime();
 
-  const remainingTime = eventTime - currentTime;
+  const remTime = eventTime - currentTime;
 
-  if (remainingTime <= 0) {
+  if (remTime <= 0) {
     document.querySelector(".timer").style.display = "none";
     document.querySelector(".heading").style.display = "none";
     document.querySelector(".birthday_text").style.display = "block";
